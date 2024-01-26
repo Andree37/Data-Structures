@@ -1,0 +1,1 @@
+AVL Trees are more efficient because they are more strictly balanced
