@@ -156,6 +156,23 @@ public:
         }
         root->color = false;
     }
+
+    void transplant(const Node* u, Node* v)
+    {
+        if (!u->parent)
+        {
+            root = v;
+        }
+        else if (u == u->parent->left)
+        {
+            u->parent->left = v;
+        }
+        else
+        {
+            u->parent->right = v;
+        }
+        v->parent = u->parent;
+    }
 };
 
 void print_tree(const Node* node)
